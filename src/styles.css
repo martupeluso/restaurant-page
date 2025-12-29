@@ -99,3 +99,17 @@ footer p {
 	font-size: 1.8rem;
 	font-style: normal;
 }
+
+.overlay {
+	position: relative;
+}
+
+.overlay::after {
+	content: "";
+	position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+	background-color: #3a363359;
+}
