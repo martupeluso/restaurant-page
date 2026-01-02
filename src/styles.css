@@ -100,16 +100,18 @@ footer p {
 	font-style: normal;
 }
 
-.overlay {
+.home {
+	background-image: url(./assets/images/home.jpg);
+	background-position: center;
+	background-size: cover;
 	position: relative;
+	z-index: 1;
 }
 
-.overlay::after {
+.home::before {
 	content: "";
 	position: absolute;
-  top: 0px;
-  left: 0px;
-  bottom: 0px;
-  right: 0px;
+	inset: 0;
 	background-color: #3a363359;
+	z-index: -1;
 }
