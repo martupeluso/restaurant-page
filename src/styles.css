@@ -108,7 +108,7 @@ footer p {
 	z-index: 1;
 }
 
-.home::before {
+.home::before, .about::before {
 	content: "";
 	position: absolute;
 	inset: 0;
@@ -163,4 +163,51 @@ footer p {
 	margin-left: 2rem;
 	margin-bottom: 1rem;
 	font-size: 2rem
+}
+
+.about {
+	background-image: url(./assets/images/about.jpg);
+	background-position: left 40%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: end;
+	justify-content: center;
+	padding-right: 6rem;
+}
+
+.about * {
+	color: var(--background-color);
+}
+
+.about h2 {
+	font-size: 4rem;
+}
+
+.about .info-container {
+	width: 650px;
+	font-size: 2rem;
+	text-align: right;
+	padding: 2rem 0;
+	line-height: 1.2;
+}
+
+.about .info-container p:first-of-type {
+	margin-bottom: 1rem;
+}
+
+.about a {
+	font-family: "Dongle", var(--font-stack);
+	font-size: 2.5rem;
+}
+
+.about a:first-of-type {
+	margin-right: 2.5rem;
+}
+
+.about a:hover {
+	color: #b7926d;
 }
