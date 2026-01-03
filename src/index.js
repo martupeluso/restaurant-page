@@ -12,12 +12,14 @@ const menuButton = document.querySelector("button:nth-of-type(2)");
 loadHome();
 
 homeButton.addEventListener("click", () => {
+  div.textContent = "";
   menuButton.classList.remove("current-page-btn");
   homeButton.classList.add("current-page-btn");
   loadHome();
 })
 
 menuButton.addEventListener("click", () => {
+  div.textContent = "";
   homeButton.classList.remove("current-page-btn");
   menuButton.classList.add("current-page-btn");
   loadMenu();
