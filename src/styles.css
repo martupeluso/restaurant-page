@@ -115,3 +115,52 @@ footer p {
 	background-color: #3a363359;
 	z-index: -1;
 }
+
+.menu {
+	background-image: url(./assets/images/menu.jpg);
+	background-size: cover;
+	background-position: right;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.menu-section {
+	display: flex;
+	padding: 4rem 0 0 8rem;
+	gap: 4rem;
+}
+
+.menu-section *, .menu-footnote {
+	color: var(--background-color);
+}
+
+.menu-section h2 {
+	font-size: 4rem;
+	margin-bottom: 1rem;
+}
+
+.menu-section ul {
+	line-height: 1;
+	margin-left: 2rem;
+}
+
+.menu-section ul li {
+	list-style-type: none;
+	font-family: "Dongle", var(--font-stack);
+	font-size: 3rem;
+}
+
+.menu-section ul li p {
+	font-size: 0.6em;
+}
+
+.food-section {
+	margin-top: 8rem;
+}
+
+.menu-footnote {
+	margin-left: 2rem;
+	margin-bottom: 1rem;
+	font-size: 2rem
+}
