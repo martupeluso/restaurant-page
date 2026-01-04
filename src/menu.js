@@ -2,15 +2,18 @@ import { div } from "./index.js";
 
 const drinks = [
   {
-    name: "Coffee *",
-    info: "All the classic options (+ blended)."
+    name: "Coffee",
+    info: "All the classic options (+ blended).",
+    footnote: true,
   },
   {
-    name: "Tea *",
-    info: "Black, green, and herbal."
+    name: "Tea",
+    info: "Black, green, and herbal.",
+    footnote: true,
   },
   {
-    name: "Chocolate *",
+    name: "Chocolate",
+    footnote: true,
   },
   {
     name: "Lemonade",
@@ -52,7 +55,8 @@ function loadMenu(){
   const drinksList = document.createElement("ul");
   drinks.forEach(option => {
     const drinkChoice = document.createElement("li");
-    drinkChoice.textContent = option.name;
+    
+    drinkChoice.innerHTML = option.footnote ? `${option.name} ` + "<span>*</span>" : option.name;
 
     if (option.info){
       const drinkInfo = document.createElement("p");
@@ -64,7 +68,13 @@ function loadMenu(){
     drinksList.appendChild(drinkChoice);
   });
 
-  drinksSection.append(drinksTitle, drinksList);
+  // FOOTNOTE
+
+  const menuFootnote = document.createElement("p");
+  menuFootnote.className = "menu-footnote";
+  menuFootnote.textContent = "* Available hot or iced.";
+
+  drinksSection.append(drinksTitle, drinksList, menuFootnote);
 
   // FOOD
 
@@ -93,13 +103,7 @@ function loadMenu(){
 
   menuSection.append(drinksSection, foodSection);
 
-  // FOOTNOTE
-
-  const menuFootnote = document.createElement("p");
-  menuFootnote.className = "menu-footnote";
-  menuFootnote.textContent = "* Available hot or iced.";
-
-  div.append(menuSection, menuFootnote);
+  div.append(menuSection);
 }
 
 export default loadMenu;
